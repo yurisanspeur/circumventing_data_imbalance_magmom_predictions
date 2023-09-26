@@ -82,8 +82,7 @@ trainer = pl.Trainer(
 # )
 bmp = checkpoint_callback.best_model_path
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-# bmp = "/home/jovyan/hgheiberger-quantum-structure-ml-d820bf1/magnetic_ordering/magmom_checkpoints/regressor_paper_allow_zeros-epoch=28-step=11020-embedding_val_loss=0.0810.ckpt"
-bmp = "/home/jovyan/hgheiberger-quantum-structure-ml-d820bf1/magnetic_ordering/magmom_checkpoints/regressor_paper_no_zeros_no_sign-epoch=1386-step=59641-embedding_val_loss=0.0902.ckpt"
+bmp = "checkpoints/regressor_paper_no_zeros_no_sign-epoch=1386-step=59641-embedding_val_loss=0.0902.ckpt"
 model.load_state_dict(torch.load(f"{bmp}", map_location=device)["state_dict"])
 model = model.to(device)
 test_data = dm.test_dataloader()

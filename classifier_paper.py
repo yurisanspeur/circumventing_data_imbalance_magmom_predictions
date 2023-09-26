@@ -252,7 +252,7 @@ if __name__ == "__main__":
     #    dmo.val_dataloader(),
     # )
     bmp = checkpoint_callback.best_model_path
-    bmp = "/home/jovyan/hgheiberger-quantum-structure-ml-d820bf1/magnetic_ordering/magmom_checkpoints/classifier_paper-epoch=12-step=2392-val_acc=93.6278.ckpt"
+    bmp = "checkpoints/classifier_paper-epoch=12-step=2392-val_acc=93.6278.ckpt"
     classifier_model.load_state_dict(torch.load(f"{bmp}")["state_dict"])
     pred_masks = []
     label_masks = []
