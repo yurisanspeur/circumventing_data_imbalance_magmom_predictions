@@ -6,9 +6,12 @@ the results in the paper: "Circumventing Data Imbalance in Magnetic Ground State
 In order to be able to run the code, the packages in the `magmom_env.yml` need to be installed.
 The code has been tested for this specific set of versions only.
 
-It is also important to mention that one needs to have a PYTHONPATH environment pointing to
+It is also important to mention that one needs to have a `PYTHONPATH` environment pointing to
 the bleeding edge of the open catalyst repo with the slight modifications (Figure S2 of the Supplementary Information (SI)) to the Gemnet OC
 model.
+```bash
+export PYTHONPATH="/path/to/code/with/tweaked_gemnet_oc:$PYTHONPATH"
+```
 
 # Citation
 If you use this codebase in your work, please consider citing:
